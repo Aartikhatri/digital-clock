@@ -16,7 +16,7 @@
         .container h1 {
             text-align: center;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            
+
         }
 
         #input-item {
@@ -29,7 +29,7 @@
              /* rgb(162, 105, 40); */
             color: #eee;
             text-align: center;
-           
+
             padding: 2vh;
         }
 
@@ -84,7 +84,7 @@
          <!-- main heading  -->
        <div class="row">
               <div class="col-12">
-                    
+
                         <h1> Here we are making To Do list </h1>
 
               </div>
@@ -112,7 +112,7 @@
                 <ul id="listbox">
 
                 </ul>
-    
+
                </div>
            </div>
 
@@ -132,13 +132,13 @@
         // script started 
 
 
-        
+
         function add() {
-            
+
             let list = document.createElement('li')
             document.getElementById('listbox').appendChild(list);
             let output = document.getElementById('inp').value;
-           
+
 
             if(output === ''){
                 document.getElementById('require').innerHTML = 'Enter here '
@@ -163,7 +163,7 @@
              }
 
      }
-     
+
 
     </script>
 </body>
