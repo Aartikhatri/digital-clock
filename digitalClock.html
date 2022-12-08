@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        #clock{
+            text-align: center;
+            margin: 35vh auto ;
+        }
+
+        #clock h1 {
+            text-shadow: 3px 1px  ;
+        }
+       
+        #show{
+            border: 7px solid;
+            border-image: linear-gradient(  to right , purple,  red,yellow);
+            border-image-slice: 1;
+            display: inline;
+            padding: 2vh;
+            font-size: 13vh;
+            background-color: black;
+            color: white;
+        
+        }
+        #show:hover{
+            border-image-slice: 1;
+            border-image-source: linear-gradient(  to right,yellow ,red , purple);
+        }
+
+        @media screen and (max-width: 912px){
+            #show{
+                font-size: 3vh;
+                padding: 1vh;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div id="clock">
+        <h1> Digital clock</h1>
+        <!-- <button  onclick="show_time()">click</button>  -->
+        <div id="show">
+
+        </div>
+
+    </div>
+
+    <!-- script -->
+    <!-- <script>
+        
+        function show_time(){
+            
+           let time = new Date();
+           let h = time.getHours();
+           let m = time.getMinutes();
+           let s = time.getSeconds();
+           let session = "AM";
+
+
+           if(h < 12){
+                h == h
+           }else{
+               h = h-12;
+               session = "PM"
+           }
+          
+        //    turnery operator
+           h = (h < 10) ? `0${h}` : h ;
+           m = (m < 10) ? `0${m}` : m ;
+           s = (s < 10) ? `0${s}` : s ;
+           
+            document.getElementById('show').innerHTML = h + ":" + m + ":" + s + " " + session ;
+           
+
+        }show_time();
+
+        setInterval(show_time , 1000);
+
+    </script> -->
+
+   <script>
+    const show_time =  document.getElementById('show') ;
+    setInterval(()=> show_time.innerHTML =  new Date().toLocaleTimeString() , 1000)
+ 
+   </script>
+
+</body>
+</html>
